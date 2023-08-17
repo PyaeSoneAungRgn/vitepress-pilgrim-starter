@@ -4,10 +4,6 @@ Documentation template styled like [Forge](https://forge.laravel.com/docs/introd
 
 ## Installation
 
-Press the `Use this template` button at the top of this repo
-
-or
-
 ```bash
 git clone https://github.com/PyaeSoneAungRgn/vitepress-pilgrim-starter.git
 cd vitepress-pilgrim-starter
