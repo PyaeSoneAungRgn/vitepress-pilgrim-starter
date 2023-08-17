@@ -14,4 +14,5 @@ npm run docs:dev
 ## Credits
 
 [@hempworks/pilgrim](https://www.npmjs.com/package/@hempworks/pilgrim)
+
 [laravel/forge-docs](https://github.com/laravel/forge-docs)
