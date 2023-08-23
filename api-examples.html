@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Runtime API Examples | Virepress Pilgrim Starter</title>
+    <meta name="description" content="Documentation template styled like Forge, Envoyer, Vapor, Jetstream, and Spark">
+    <link rel="preload stylesheet" href="/assets/style.df414054.css" as="style">
+    
+    <script type="module" src="/assets/app.e96de66f.js"></script>
+    <link rel="modulepreload" href="/assets/chunks/framework.f6186024.js">
+    <link rel="modulepreload" href="/assets/chunks/LNLocalSearchBox.5ffb4b53.js">
+    <link rel="modulepreload" href="/assets/api-examples.md.4e55d392.lean.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+    <script id="check-dark-light">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+  </head>
+  <body>
+    <div id="app"><!--[--><header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur border-b dark:border-gray-700 sticky top-0 z-50 w-full h-[3.3rem] flex-none"><div class="max-w-[90rem] px-4 sm:px-6 md:px-8 mx-auto h-[3.3rem]"><div class="flex items-center h-[3.3rem] gap-4"><button type="button" class="md:hidden text-gray-600 dark:text-gray-400"><span class="sr-only">Navigation</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="flex-shrink-0 w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg></button><!--[--><!----><div style="position:fixed;top:1;left:1;width:1;height:0;padding:0;margin:-1;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0;display:none;"></div><!--]--><!--[--><a href="/" class="flex-shrink-0 h-[24px] text-gray-500 dark:text-white" alt="Virepress Pilgrim Starter"><img class="flex-shrink-0 h-[24px] text-gray-500 dark:text-white block dark:hidden" alt="logo" src="/logo.png"><img class="flex-shrink-0 h-[24px] text-gray-500 dark:text-white hidden dark:block" alt="logo" src="/logo-dark.png"></a><!--]--><!----><div class="ml-auto md:flex items-center md:divide-x md:divide-gray-200 md:dark:divide-gray-700"><div class="hidden md:flex items-center gap-12 px-6"><!--[--><a href="/" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-500">Home</a><!--]--></div><div class="hidden md:flex md:items-center gap-6 pl-6"><div data-headlessui-state class="relative inline-block text-left"><div><button id="headlessui-menu-button-6" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state class="flex items-center text-gray-500 dark:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 text-gray-500"><path d="M10 2a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2zM10 15a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 15zM10 7a3 3 0 100 6 3 3 0 000-6zM15.657 5.404a.75.75 0 10-1.06-1.06l-1.061 1.06a.75.75 0 001.06 1.06l1.06-1.06zM6.464 14.596a.75.75 0 10-1.06-1.06l-1.06 1.06a.75.75 0 001.06 1.06l1.06-1.06zM18 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0118 10zM5 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 015 10zM14.596 15.657a.75.75 0 001.06-1.06l-1.06-1.061a.75.75 0 10-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 001.06-1.06l-1.06-1.06a.75.75 0 10-1.061 1.06l1.06 1.06z"></path></svg></button><!----></div></div><a href="https://github.com/PyaeSoneAungRgn/vitepress-pilgrim-starter" class="text-gray-500 dark:text-gray-400"><svg class="w-5 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></a></div><div class="flex items-center gap-3 pl-6"><button type="button" class="md:hidden flex-shrink-0 text-gray-600 dark:text-gray-400"><span class="sr-only">Search</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path></svg></button><button type="button" class="md:hidden flex-shrink-0 text-gray-600 dark:text-gray-400"><span class="sr-only">More</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"></path></svg></button><!--[--><!----><div style="position:fixed;top:1;left:1;width:1;height:0;padding:0;margin:-1;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0;display:none;"></div><!--]--></div></div></div></div></header><div class="relative"><!--[--><!--]--><div class="relative z-10 max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8"><div class="hidden lg:block fixed z-20 inset-0 w-[19.5rem] top-[3.3rem] left-[max(0px,calc(50%-45rem))] right-auto px-8 pb-10 overflow-y-auto"><div class="sticky top-0 -ml-0.5"><div class="h-10 bg-gray-50 dark:bg-gray-900"></div><!--[--><!----><div id="local-search"><div class="bg-white dark:bg-gray-900 relative pointer-events-auto"><button class="hidden w-full lg:flex items-center text-sm leading-6 text-gray-400 rounded-md ring-1 ring-gray-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-gray-300 dark:hover:ring-gray-800/10 dark:bg-gray-800 dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] dark:hover:bg-gray-700"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-3 text-gray-400 flex-none"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path></svg><span>Search...</span><kbd class="ml-auto pl-3 flex-none font-sans text-xs font-semibold">⌘K</kbd></button></div></div><!--]--><div class="h-8 bg-gradient-to-b from-gray-50 dark:from-gray-900"></div></div><div class="sidebar"><nav class="flex flex-col gap-6"><!--[--><div><span class="text-gray-700 dark:text-gray-400 font-bold text-sm">Getting started</span><div class="mt-2"><!--[--><a href="/" class="text-sm text-gray-500 hover:text-gray-600 border-l border-gray-300/50 dark:border-gray-800 flex items-start pl-4 py-1 hover:border-primary-500 dark:hover:border-gray-700">Installation</a><!--]--></div></div><div><span class="text-gray-700 dark:text-gray-400 font-bold text-sm">Examples</span><div class="mt-2"><!--[--><a href="/markdown-examples" class="text-sm text-gray-500 hover:text-gray-600 border-l border-gray-300/50 dark:border-gray-800 flex items-start pl-4 py-1 hover:border-primary-500 dark:hover:border-gray-700">Markdown Examples</a><a href="/api-examples" class="text-sm text-gray-500 hover:text-gray-600 border-l border-gray-300/50 dark:border-gray-800 flex items-start pl-4 py-1 hover:border-primary-500 dark:hover:border-gray-700 !text-primary-500 !border-primary-500">Runtime API Examples</a><!--]--></div></div><!--]--></nav></div></div><div class="lg:pl-[19.5rem]"><div class="antialiased max-w-3xl mx-auto pt-10 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16 pb-24"><div><div class="PilgrimDoc max-w-none content prose dark:prose-invert prose-headings:font-normal prose-h1:text-3xl prose-h2:mb-3 prose-ul:list-none prose-ul:px-0 prose-li:pl-6 prose-img:rounded-lg prose-img:shadow prose-pre:bg-inherit prose-pre:p-6 prose-a:font-bold prose-a:no-underline prose-a:border-b hover:prose-a:border-b-2 prose-a:border-primary-500/50"><div style="position:relative;"><div><h1 id="runtime-api-examples" tabindex="-1">Runtime API Examples <a class="header-anchor" href="#runtime-api-examples" aria-label="Permalink to &quot;Runtime API Examples&quot;">​</a></h1><p>This page demonstrates usage of some of the runtime APIs provided by VitePress.</p><p>The main <code>useData()</code> API can be used to access site, theme, and page data for the current page. It works in both <code>.md</code> and <code>.vue</code> files:</p><div class="language-md"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki css-variables"><code><span class="line"><span style="color:var(--shiki-color-text);">&lt;script setup&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">import { useData } from &#39;vitepress&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-color-text);">const { theme, page, frontmatter } = useData()</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">&lt;/script&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-color-text);font-weight:bold;">## Results</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-color-text);font-weight:bold;">### Theme Data</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">&lt;pre&gt;{{ theme }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-color-text);font-weight:bold;">### Page Data</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">&lt;pre&gt;{{ page }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-color-text);font-weight:bold;">### Page Frontmatter</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">&lt;pre&gt;{{ frontmatter }}&lt;/pre&gt;</span></span></code></pre></div><h2 id="results" tabindex="-1">Results <a class="header-anchor" href="#results" aria-label="Permalink to &quot;Results&quot;">​</a></h2><h3 id="theme-data" tabindex="-1">Theme Data <a class="header-anchor" href="#theme-data" aria-label="Permalink to &quot;Theme Data&quot;">​</a></h3><pre>{
+  &quot;logo&quot;: {
+    &quot;light&quot;: &quot;/logo.png&quot;,
+    &quot;dark&quot;: &quot;/logo-dark.png&quot;
+  },
+  &quot;nav&quot;: [
+    {
+      &quot;text&quot;: &quot;Home&quot;,
+      &quot;link&quot;: &quot;/&quot;
+    }
+  ],
+  &quot;sidebar&quot;: [
+    {
+      &quot;text&quot;: &quot;Getting started&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;Installation&quot;,
+          &quot;link&quot;: &quot;/&quot;
+        }
+      ]
+    },
+    {
+      &quot;text&quot;: &quot;Examples&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;Markdown Examples&quot;,
+          &quot;link&quot;: &quot;/markdown-examples&quot;
+        },
+        {
+          &quot;text&quot;: &quot;Runtime API Examples&quot;,
+          &quot;link&quot;: &quot;/api-examples&quot;
+        }
+      ]
+    }
+  ],
+  &quot;search&quot;: {
+    &quot;provider&quot;: &quot;local&quot;,
+    &quot;options&quot;: {
+      &quot;placeholder&quot;: &quot;Search...&quot;
+    }
+  },
+  &quot;githubUrl&quot;: &quot;https://github.com/PyaeSoneAungRgn/vitepress-pilgrim-starter&quot;
+}</pre><h3 id="page-data" tabindex="-1">Page Data <a class="header-anchor" href="#page-data" aria-label="Permalink to &quot;Page Data&quot;">​</a></h3><pre>{
+  &quot;title&quot;: &quot;Runtime API Examples&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;frontmatter&quot;: {
+    &quot;outline&quot;: &quot;deep&quot;
+  },
+  &quot;headers&quot;: [],
+  &quot;relativePath&quot;: &quot;api-examples.md&quot;,
+  &quot;filePath&quot;: &quot;api-examples.md&quot;
+}</pre><h3 id="page-frontmatter" tabindex="-1">Page Frontmatter <a class="header-anchor" href="#page-frontmatter" aria-label="Permalink to &quot;Page Frontmatter&quot;">​</a></h3><pre>{
+  &quot;outline&quot;: &quot;deep&quot;
+}</pre><h2 id="more" tabindex="-1">More <a class="header-anchor" href="#more" aria-label="Permalink to &quot;More&quot;">​</a></h2><p>Check out the documentation for the <a href="https://vitepress.dev/reference/runtime-api#usedata" target="_blank" rel="noreferrer">full list of runtime APIs</a>.</p></div></div></div><footer class="divide-y divide-gray-200 dark:divide-gray-700"><div class="gap-6 flex justify-between py-6"><a class="font-semibold group flex items-center text-base space-x-2" href="/markdown-examples"><span class="text-gray-500 group-hover:text-gray-600"><!--[-->←<!--]--></span><span class="text-sm text-gray-500 group-hover:text-gray-700"><!--[--> Markdown Examples<!--]--></span><span class="text-gray-500 group-hover:text-gray-600"><!--[--><!--]--></span></a><!----></div><!----></footer><div class="fixed z-20 top-[3.3rem] bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-10 overflow-y-auto hidden xl:block"><div class="px-8"><h2 class="aside-header font-bold text-sm text-gray-600 dark:text-gray-400"> On this page </h2><div><div class="aside"><nav class="mt-4"><ul><!--[--><!--]--></ul></nav></div></div></div></div></div></div></div></div></div><!--]--></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"index.md\":\"460e9608\",\"api-examples.md\":\"4e55d392\",\"markdown-examples.md\":\"61a59b0c\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"Virepress Pilgrim Starter\",\"description\":\"Documentation template styled like Forge, Envoyer, Vapor, Jetstream, and Spark\",\"base\":\"/\",\"head\":[],\"appearance\":true,\"themeConfig\":{\"logo\":{\"light\":\"/logo.png\",\"dark\":\"/logo-dark.png\"},\"nav\":[{\"text\":\"Home\",\"link\":\"/\"}],\"sidebar\":[{\"text\":\"Getting started\",\"items\":[{\"text\":\"Installation\",\"link\":\"/\"}]},{\"text\":\"Examples\",\"items\":[{\"text\":\"Markdown Examples\",\"link\":\"/markdown-examples\"},{\"text\":\"Runtime API Examples\",\"link\":\"/api-examples\"}]}],\"search\":{\"provider\":\"local\",\"options\":{\"placeholder\":\"Search...\"}},\"githubUrl\":\"https://github.com/PyaeSoneAungRgn/vitepress-pilgrim-starter\"},\"locales\":{},\"scrollOffset\":90,\"cleanUrls\":false}");</script>
+    
+  </body>
+</html>
