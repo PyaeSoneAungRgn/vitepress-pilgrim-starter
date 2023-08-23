@@ -16,9 +16,15 @@ export default defineConfigWithTheme<ThemeConfig>({
             dark: '/logo-dark.png',
         },
         nav: [
-            { text: 'Home', link: '/markdown-examples' },
+            { text: 'Home', link: '/' },
         ],
         sidebar: [
+            {
+                text: 'Getting started',
+                items: [
+                    { text: 'Installation', link: '/' },
+                ],
+            },
             {
                 text: 'Examples',
                 items: [
